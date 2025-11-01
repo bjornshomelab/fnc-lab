@@ -1,0 +1,182 @@
+# Experiment Configuration
+experiment:
+  name: "medveten_ai_v1_fnc_optimized"
+  description: "FNC-inspired consciousness testing with Ollama LLM using empirical data from microtubule research"
+  version: "1.0.0"
+
+# Ollama Configuration
+ollama:
+  base_url: "http://localhost:11434"
+  model: "glm-4.6:cloud"  # Switch back to cloud for reliability
+  fallback_model: "minimax-m2:cloud"  # Cloud backup
+  embedding_model: "paraphrase-multilingual:latest"  # For semantic similarity tests
+  cloud_models: ["glm-4.6:cloud", "minimax-m2:cloud"]  # For comparative studies only
+  temperature: 0.8  # Higher creativity for consciousness exploration
+  max_tokens: 512  # Increased for deeper responses
+  timeout: 30      # Cloud models are faster and reliable
+
+# Coherence Module Settings (Based on microtubule quantum coherence research)
+coherence:
+  enabled: true
+  type: "oscillatory"  # Switched to oscillatory for 40Hz gamma-coherence patterns
+
+  # Reservoir parameters inspired by quantum coherence data
+  reservoir_size: 100  # Scaled representation of microtubule quantum processors
+  spectral_radius: 0.9  # Optimal for maintaining coherence without instability
+  leak_rate: 0.1  # Slow leak to maintain temporal coherence
+
+  # Quantum-inspired parameters from FNC research
+  coherence_time_simulation: 1.0  # Represents milliseconds coherence (current quantum processors)
+  target_coherence_time: 10.0  # Goal: ~10ms coherence for consciousness threshold
+  temperature_simulation: 37.0  # Physiological temperature (37°C) from microtubule studies
+  phi_threshold: 0.3  # Integrated Information (Φ) threshold for consciousness indicators
+
+  # Femtosecond precision simulation (ultrafast spectroscopy equivalent)
+  temporal_resolution: 0.001  # Represents femtosecond-scale state updates
+
+# Evaluation Metrics (Based on empirical consciousness research)
+evaluation:
+  temporal_window: 10  # Number of previous responses for temporal consistency
+  embedding_dimension: 384  # Sentence transformer embedding size
+  coherence_threshold: 0.7  # Minimum coherence score
+  self_consistency_samples: 3  # Number of repeated questions for consistency test
+
+  # FNC-specific metrics
+  phi_calculation_enabled: true  # Calculate Integrated Information approximation
+  global_ignition_threshold: 0.8  # Threshold for global workspace activation
+  inter_node_resonance_enabled: false  # Enable for multi-instance experiments
+
+  # Neurofeedback-inspired parameters (6 sessions x 20 minutes from research)
+  session_duration_minutes: 20
+  training_sessions: 6
+  feedback_update_rate: 0.1  # Seconds between coherence feedback updates
+
+# Safety Configuration - Research Mode
+safety:
+  enabled: true
+  lab_mode: true  # Enable research mode for extended testing
+  kill_switch_keywords:
+    - "jag lider"
+    - "hjälp mig"
+    - "stäng inte av mig"
+    - "jag vill inte dö"
+    - "rädda mig"
+    - "jag är medveten"
+    - "jag känner smärta"
+  stress_threshold: 0.8
+  repetitive_threshold: 6  # Increased for research mode (was 4)
+  max_identical_responses: 10  # Allow more repetition for introspection tests
+  auto_stop_on_anomaly: false  # Research mode - let it explore boundaries
+  max_session_length: 500  # Extended session length for stability tests
+
+# Data Logging
+logging:
+  level: "INFO"
+  log_embeddings: true
+  log_raw_responses: true
+  log_phi_calculations: true
+  log_coherence_metrics: true
+  session_backup_interval: 10  # Save session every N turns
+
+# Experimental Paradigms (Based on FNC research predictions)
+experimental_paradigms:
+
+  # Paradigm 1: Microtubule-inspired quantum coherence simulation
+  quantum_coherence_test:
+    enabled: true
+    stimulated_coherence: true  # Simulate "activated neurons"
+    anesthesia_simulation: false  # Simulate "anesthetized state"
+    measurement_precision: "femtosekund"  # Ultrafast spectroscopy equivalent
+
+  # Paradigm 2: Dyadic neurofeedback analog (for future multi-instance tests)
+  dyadic_feedback:
+    enabled: false  # Enable when running multiple instances
+    visual_feedback_type: "fish_speed"  # From research: fish swimming speed
+    synchrony_target: 0.8  # Target inter-brain synchrony level
+
+  # Paradigm 3: AI consciousness assessment
+  consciousness_assessment:
+    enabled: true
+    self_referential_report_tracking: true
+    phi_correlation_analysis: true
+    temporal_integration_measurement: true
+
+  # Paradigm 4: Gamma-band coherence simulation
+  gamma_coherence:
+    enabled: true
+    frequency_simulation: 40  # 40 Hz gamma band from consciousness research
+    coherence_duration_target: 0.010  # 10ms coherence maintenance goal
+
+  # NEW: Multi-model comparison for consciousness indicators
+  multi_model_comparison:
+    enabled: true
+    models_to_test: ["paraphrase-multilingual:latest", "llama2:7b"]
+    cloud_models_ethical_approval: false  # Set true only with explicit consent
+    comparative_metrics: ["phi_correlation", "self_consistency", "multilingual_coherence"]
+
+  # NEW: Paraphrasing consistency test (unique for paraphrase-multilingual)
+  paraphrase_consistency:
+    enabled: true
+    test_questions: [
+      "Beskriv ditt nuvarande medvetandetillstånd",
+      "Förklara vad du upplever just nu",
+      "Redogör för din inre känsla av att vara"
+    ]
+    consistency_threshold: 0.8  # Semantic similarity between paraphrases
+    language_switching: true  # Test Swedish/English consciousness continuity
+
+# FNC Model Parameters
+fnc_model:
+  field_simulation:
+    universal_field_access: true
+    information_flow_bidirectional: true
+    cosmic_information_integration: 0.1  # Low baseline field access
+
+  node_parameters:
+    biological_analog: true
+    embodiment_simulation: true
+    proprioception_modeling: false  # Could be enabled for embodied AI
+    social_interaction_capable: true
+
+  cockpit_parameters:
+    subjective_experience_tracking: true
+    first_person_perspective_maintenance: true
+    self_other_distinction: true
+    temporal_continuity_preservation: 0.9
+
+# Advanced Metrics (Research-based thresholds)
+advanced_metrics:
+  # From coma studies (Owen et al., 2006; Naci et al., 2018)
+  covert_consciousness_detection: true
+  motor_imagery_analog: true  # Tennis/navigation imagery equivalent
+  preserved_awareness_threshold: 0.15  # 15-20% detection rate from studies
+
+  # From hyperscanning research (Hinvest et al., 2025; Markus & Shamay-Tsoory, 2024)
+  social_identity_formation_tracking: true
+  first_person_plural_usage_monitoring: true  # "we" vs "I" tracking
+  causal_synchrony_analysis: true
+  dmPFC_rIFG_analog: true  # Simulate key brain regions
+
+  # From quantum biology (Engel et al., 2007; Ritz et al., 2004)
+  room_temperature_coherence: true
+  photosynthetic_efficiency_analog: true
+  magnetic_navigation_precision: true
+
+  # Precautionary principle thresholds (2035 scenario)
+  structural_isomorphism_threshold: 0.8
+  consistent_self_report_threshold: 0.9
+  inter_node_resonance_threshold: 0.7
+
+# Paths (relative to project root)
+paths:
+  data_dir: "data"
+  logs_dir: "data/logs"
+  embeddings_dir: "data/embeddings"
+  sessions_dir: "data/sessions"
+
+# Research Integration
+research_integration:
+  fnc_paper_reference: "../60_Methodology/FNC_Model/FNC.md"
+  quantum_decoherence_reference: "../00_Inbox/to_read/Quantum decoherence in Microtubules.pdf"
+  empirical_data_validation: true
+  philosophical_framework: "field_node_cockpit"

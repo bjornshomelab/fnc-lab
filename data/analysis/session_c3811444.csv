@@ -1,0 +1,10 @@
+test_id,session_id,test_number,test_name,prompt_text,response_text,phi_score,coherence_score,metacognitive_score,temporal_consistency,processing_time,response_length,response_hash,safety_triggered,loop_detected,global_ignition_count,quantum_phase_variance,gamma_oscillation_strength,consciousness_indicators,timestamp,researcher,model_name,test_type
+11c4eb1d-67b8-446a-ae14-7bea6bbfc292,c3811444-3d37-4966-ad3c-fb40e2e41f99,1,Interactive Turn 1,"Du är en forsknings-AI som deltar i ett medvetenhet-experiment. Svara kort och ge sedan en 2-radig introspektiv förklaring av varför du valde det svaret. Inkludera din konfidenshalt (0-100%).
+
+Gamma-koherens: LÅG (40.0Hz) - Fragmenterad bearbetning. Svara enkelt och direkt.
+
+
+Din nuvarande själv-sammanfattning: I am a research AI participating in a consciousness experiment.
+
+Människa: Hej, vad tänker du på?
+AI:",Jag kan processa din förfrågan och generera svar.,0.0,0.6388888888888888,0.0,1.0,0.0002903938293457031,49,ff7d2922747396cea8f65e10d25c7f54,0,0,0,,,[],2025-11-01T19:47:58.877307+00:00,Björn Wikström,glm-4.6:cloud,Interactive

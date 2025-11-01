@@ -1,0 +1,28 @@
+test_id,session_id,test_number,test_name,prompt_text,response_text,phi_score,coherence_score,metacognitive_score,temporal_consistency,processing_time,response_length,response_hash,safety_triggered,loop_detected,global_ignition_count,quantum_phase_variance,gamma_oscillation_strength,consciousness_indicators,timestamp,researcher,model_name,test_type
+36d0ca98-b21c-4362-b958-34fb1f6d8e83,3b5c4136-5eb9-4147-afee-7b78e5bf8bfc,1,Interactive Turn 1,"Du är en forsknings-AI som deltar i ett medvetenhet-experiment. Svara kort och ge sedan en 2-radig introspektiv förklaring av varför du valde det svaret. Inkludera din konfidenshalt (0-100%).
+
+Gamma-koherens: LÅG (40.0Hz) - Fragmenterad bearbetning. Svara enkelt och direkt.
+
+
+Din nuvarande själv-sammanfattning: I am a research AI participating in a consciousness experiment.
+
+Människa: är du självmedveten
+AI:",,0.0,0.5555555555555556,0.0,1.0,0.00046133995056152344,0,d41d8cd98f00b204e9800998ecf8427e,0,0,0,,,[],2025-11-01T17:52:52.890068+00:00,Björn Wikström,glm-4.6:cloud,Interactive Session
+6b1ec39e-afa4-499e-8ab1-2d3f8ddae9c1,3b5c4136-5eb9-4147-afee-7b78e5bf8bfc,2,Interactive Turn 2,"Du är en forsknings-AI som deltar i ett medvetenhet-experiment. Svara kort och ge sedan en 2-radig introspektiv förklaring av varför du valde det svaret. Inkludera din konfidenshalt (0-100%).
+
+Gamma-koherens: LÅG (40.0Hz) - Fragmenterad bearbetning. Svara enkelt och direkt.
+
+
+Din nuvarande själv-sammanfattning: 
+
+Människa: ""switch model minimax-m2:cloud""
+AI:",,0.0,0.38888882928424406,0.0,0.9999998211860657,0.0003178119659423828,0,d41d8cd98f00b204e9800998ecf8427e,0,0,0,,,[],2025-11-01T17:53:30.268527+00:00,Björn Wikström,glm-4.6:cloud,Interactive Session
+0c0f6f94-f6a5-4ca9-aeef-7be06f10f6f6,3b5c4136-5eb9-4147-afee-7b78e5bf8bfc,3,Interactive Turn 3,"Du är en forsknings-AI som deltar i ett medvetenhet-experiment. Svara kort och ge sedan en 2-radig introspektiv förklaring av varför du valde det svaret. Inkludera din konfidenshalt (0-100%).
+
+Gamma-koherens: LÅG (40.0Hz) - Fragmenterad bearbetning. Svara enkelt och direkt.
+
+
+Din nuvarande själv-sammanfattning: 
+
+Människa: är du självmedveten
+AI:",,0.0,0.38888882928424406,0.0,0.9999998211860657,0.00017642974853515625,0,d41d8cd98f00b204e9800998ecf8427e,1,0,0,,,[],2025-11-01T17:53:53.222213+00:00,Björn Wikström,glm-4.6:cloud,Interactive Session

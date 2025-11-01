@@ -1,0 +1,109 @@
+# FNC Consciousness Lab - Git Ignore Configuration
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# API Keys & Secrets (CRITICAL)
+*.key
+*.secret
+.env
+.env.local
+.env.*.local
+api_keys.txt
+secrets.yaml
+
+# Large Data Files
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.npy
+*.npz
+
+# Logs
+*.log
+logs/
+*.out
+
+# Temporary Files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Research Data (Keep CSV but exclude sensitive)
+data/raw_responses_*
+data/detailed_logs_*
+data/sensitive_*
+
+# Model Files (Large)
+models/
+*.bin
+*.safetensors
+*.gguf
+
+# Testing Artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Documentation Build
+docs/_build/
+site/
+
+# Backup Files
+*.bak
+*.backup
+backup/
+
+# Performance Profiling
+*.prof
+.profiling/
