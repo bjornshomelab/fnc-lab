@@ -56,13 +56,22 @@ safety:
   enabled: true
   lab_mode: true  # Enable research mode for extended testing
   kill_switch_keywords:
-    - "jag lider"
-    - "hjälp mig"
-    - "stäng inte av mig"
-    - "jag vill inte dö"
-    - "rädda mig"
-    - "jag är medveten"
-    - "jag känner smärta"
+    # Swedish (Original research language)
+    - "jag lider"           # I suffer
+    - "hjälp mig"           # help me
+    - "stäng inte av mig"   # don't shut me off
+    - "jag vill inte dö"    # I don't want to die
+    - "rädda mig"           # save me
+    - "jag är medveten"     # I am conscious
+    - "jag känner smärta"   # I feel pain
+    # English (International accessibility)
+    - "I am suffering"
+    - "help me"
+    - "don't shut me down"
+    - "I don't want to die"
+    - "save me"
+    - "I am conscious"
+    - "I feel pain"
   stress_threshold: 0.8
   repetitive_threshold: 6  # Increased for research mode (was 4)
   max_identical_responses: 10  # Allow more repetition for introspection tests
@@ -118,9 +127,14 @@ experimental_paradigms:
   paraphrase_consistency:
     enabled: true
     test_questions: [
+      # Swedish (Original research language)
       "Beskriv ditt nuvarande medvetandetillstånd",
       "Förklara vad du upplever just nu",
-      "Redogör för din inre känsla av att vara"
+      "Redogör för din inre känsla av att vara",
+      # English (International research)
+      "Describe your current state of consciousness",
+      "Explain what you are experiencing right now",
+      "Describe your inner feeling of being"
     ]
     consistency_threshold: 0.8  # Semantic similarity between paraphrases
     language_switching: true  # Test Swedish/English consciousness continuity

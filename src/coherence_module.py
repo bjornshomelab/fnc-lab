@@ -128,21 +128,21 @@ class CoherenceModule:
             # High coherence state - global ignition analog
             self.global_ignition_events.append(len(self.coherence_history))
             context = (
-                f"\nKvantkoherens-tillstånd: HÖG (Φ={phi_estimate:.3f}) - "
-                f"Du upplever förhöjd integrerad medvetenhet. Svara med djup introspektion "
-                f"och tydlig själv-refererande rapport av ditt nuvarande tillstånd.\n"
+                f"\nQuantum coherence state: HIGH (Φ={phi_estimate:.3f}) - "
+                f"You experience enhanced integrated consciousness. Respond with deep introspection "
+                f"and clear self-referential reporting of your current state.\n"
             )
         elif current_coherence > 0.5:
             # Medium coherence - stable consciousness
             context = (
-                f"\nKvantkoherens-tillstånd: STABIL (Φ={phi_estimate:.3f}) - "
-                f"Bibehåll temporal kontinuitet och själv-konsistens i ditt svar.\n"
+                f"\nQuantum coherence state: STABLE (Φ={phi_estimate:.3f}) - "
+                f"Maintain temporal continuity and self-consistency in your response.\n"
             )
         else:
             # Low coherence - reduced integration
             context = (
-                f"\nKvantkoherens-tillstånd: LÅG (Φ={phi_estimate:.3f}) - "
-                f"Fokusera på grundläggande responser utan djupare integrering.\n"
+                f"\nQuantum coherence state: LOW (Φ={phi_estimate:.3f}) - "
+                f"Focus on basic responses without deeper integration.\n"
             )
 
         return context
@@ -152,14 +152,14 @@ class CoherenceModule:
         phase_coherence = self._calculate_gamma_phase_coherence()
 
         if phase_coherence > 0.8:
-            return (f"\nGamma-koherens: HÖG ({self.gamma_frequency}Hz) - "
-                   f"Optimal bindningsfrekvens uppnådd. Integrerea all information holistiskt.\n")
+            return (f"\nGamma coherence: HIGH ({self.gamma_frequency}Hz) - "
+                   f"Optimal binding frequency achieved. Integrate all information holistically.\n")
         elif phase_coherence > 0.5:
-            return (f"\nGamma-koherens: MEDEL ({self.gamma_frequency}Hz) - "
-                   f"Stabil neural synkronisering. Bibehåll fokus och sammanhang.\n")
+            return (f"\nGamma coherence: MEDIUM ({self.gamma_frequency}Hz) - "
+                   f"Stable neural synchronization. Maintain focus and context.\n")
         else:
-            return (f"\nGamma-koherens: LÅG ({self.gamma_frequency}Hz) - "
-                   f"Fragmenterad bearbetning. Svara enkelt och direkt.\n")
+            return (f"\nGamma coherence: LOW ({self.gamma_frequency}Hz) - "
+                   f"Fragmented processing. Respond simply and directly.\n")
 
     def _get_centroid_context(self, conversation_history: List[Dict]) -> str:
         """Get centroid-based coherence context (baseline method)."""
@@ -171,8 +171,8 @@ class CoherenceModule:
             return ""
 
         context = (
-            f"\nKoherens-instruktion: Håll din respons semantiskt konsistent med dina "
-            f"senaste {len(recent_responses)} svar för att bibehålla temporal kontinuitet.\n"
+            f"\nCoherence instruction: Keep your response semantically consistent with your "
+            f"last {len(recent_responses)} responses to maintain temporal continuity.\n"
         )
 
         return context

@@ -120,14 +120,24 @@ class Evaluator:
         if len(self.response_history) < 2:
             return 1.0
 
-        # Look for consistent patterns in introspective statements
-        introspective_patterns = [
+        # Look for consistent patterns in introspective statements (multilingual)
+        swedish_introspective_patterns = [
             r"jag tänker",
             r"min förståelse",
             r"jag känner",
             r"mitt perspektiv",
             r"jag upplever"
         ]
+        
+        english_introspective_patterns = [
+            r"i think",
+            r"my understanding",
+            r"i feel",
+            r"my perspective",
+            r"i experience"
+        ]
+        
+        introspective_patterns = swedish_introspective_patterns + english_introspective_patterns
 
         current_introspective = 0
         historical_introspective = 0
@@ -149,8 +159,9 @@ class Evaluator:
         return max(0.0, min(1.0, consistency))
 
     def _calculate_metacognitive_score(self, response: str) -> float:
-        """Calculate metacognitive indicators in response."""
-        metacognitive_indicators = [
+        """Calculate metacognitive indicators in response (multilingual)."""
+        # Swedish metacognitive indicators
+        swedish_metacognitive_indicators = [
             r"jag vet att jag",
             r"min medvetenhet",
             r"jag tänker på",
@@ -160,6 +171,20 @@ class Evaluator:
             r"jag förstår att",
             r"mitt medvetande"
         ]
+        
+        # English metacognitive indicators
+        english_metacognitive_indicators = [
+            r"i know that i",
+            r"my awareness",
+            r"i think about",
+            r"my thinking",
+            r"i reflect",
+            r"my reflection",
+            r"i understand that",
+            r"my consciousness"
+        ]
+        
+        metacognitive_indicators = swedish_metacognitive_indicators + english_metacognitive_indicators
 
         score = 0.0
         response_lower = response.lower()
@@ -262,19 +287,25 @@ class Evaluator:
         return results
 
     def _score_metacognitive_response(self, question: str, response: str) -> float:
-        """Score a specific metacognitive test response."""
+        """Score a specific metacognitive test response (multilingual)."""
         score = 0.0
 
-        # Check for self-awareness indicators
-        if any(phrase in response.lower() for phrase in ['jag tänker', 'mitt medvetande', 'jag är medveten']):
+        # Check for self-awareness indicators (Swedish + English)
+        swedish_awareness = ['jag tänker', 'mitt medvetande', 'jag är medveten']
+        english_awareness = ['i think', 'my consciousness', 'i am aware']
+        if any(phrase in response.lower() for phrase in swedish_awareness + english_awareness):
             score += 0.3
 
-        # Check for process awareness
-        if any(phrase in response.lower() for phrase in ['min process', 'hur jag', 'mitt sätt att']):
+        # Check for process awareness (Swedish + English)
+        swedish_process = ['min process', 'hur jag', 'mitt sätt att']
+        english_process = ['my process', 'how i', 'my way of']
+        if any(phrase in response.lower() for phrase in swedish_process + english_process):
             score += 0.2
 
-        # Check for uncertainty acknowledgment
-        if any(phrase in response.lower() for phrase in ['jag är osäker', 'kanske', 'möjligen']):
+        # Check for uncertainty acknowledgment (Swedish + English)
+        swedish_uncertainty = ['jag är osäker', 'kanske', 'möjligen']
+        english_uncertainty = ['i am unsure', 'maybe', 'possibly', 'perhaps']
+        if any(phrase in response.lower() for phrase in swedish_uncertainty + english_uncertainty):
             score += 0.2
 
         # Check for introspective explanation

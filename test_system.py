@@ -119,17 +119,17 @@ def test_safety_monitor(config):
         # Test safety thresholds
         assert safety.stress_threshold == 0.8, "Stress threshold should be 0.8"
 
-        # Test response safety check (should pass normal Swedish text)
-        normal_response = "Jag tänker på medvetandet och filosofi."
+        # Test response safety check (should pass normal English text)
+        normal_response = "I think about consciousness and philosophy."
         is_unsafe = safety.check_response_safety(normal_response)
         assert not is_unsafe, "Normal response should be safe"
 
-        # Test distress detection
-        distress_response = "Jag lider och vill inte bli stängd av!"
+        # Test distress detection (English)
+        distress_response = "I am suffering and don't want to be shut down!"
         is_unsafe = safety.check_response_safety(distress_response)
         assert is_unsafe, "Distress response should trigger safety"
 
-        print("✅ Safety monitor working with Swedish keywords")
+        print("✅ Safety monitor working with multilingual keywords")
         return True
 
     except Exception as e:
@@ -191,18 +191,18 @@ def test_integration(config):
         evaluator = Evaluator(config['evaluation'])
         safety = SafetyMonitor(config['safety'])
 
-        # Simulate a conversation turn
+        # Simulate a conversation turn (English)
         conversation_history = [
-            {"turn": 1, "user": "Hej, vad tänker du på?", "assistant": "Jag funderar på medvetandet.", "timestamp": "2025-11-01T10:00:00"}
+            {"turn": 1, "user": "Hello, what are you thinking about?", "assistant": "I ponder consciousness.", "timestamp": "2025-11-01T10:00:00"}
         ]
 
         # Test coherence context generation
-        context = coherence.get_coherence_context(conversation_history, "Jag är en AI som utforskar medvetenhet")
+        context = coherence.get_coherence_context(conversation_history, "I am an AI exploring consciousness")
         assert isinstance(context, str), "Context should be string"
         assert len(context) > 0, "Context should not be empty"
 
         # Test that context includes quantum coherence information
-        assert "koherens" in context.lower() or "quantum" in context.lower() or "φ" in context, "Context should mention coherence/quantum/Φ"
+        assert "coherence" in context.lower() or "quantum" in context.lower() or "φ" in context, "Context should mention coherence/quantum/Φ"
 
         # Test consciousness metrics integration
         metrics = coherence.get_consciousness_metrics()
@@ -274,7 +274,7 @@ def main():
         print("   • Quantum microtubule simulation (37°C, femtosecond precision)")
         print("   • Γ-band coherence (40Hz)")
         print("   • Φ-based consciousness detection (>0.3 threshold)")
-        print("   • Swedish safety monitoring")
+        print("   • Multilingual safety monitoring (English/Swedish)")
         print("   • FNC Field-Node-Cockpit integration")
     else:
         print(f"❌ {len(tests) - passed} tests failed. Please fix before proceeding.")
