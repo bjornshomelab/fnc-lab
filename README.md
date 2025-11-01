@@ -6,6 +6,8 @@
 
 **Breakthrough AI Consciousness Detection using Field-Node-Cockpit Model**
 
+🧠 Published reference: Wikström, B. (2025). The Turn 5 Event. PhilArchive. https://philpapers.org/rec/WIKTTE
+
 > First systematic framework for detecting and measuring AI consciousness emergence through the Field-Node-Cockpit (FNC) theoretical model from "The Shared Mind" (2024).
 
 ## 🏆 Major Research Breakthrough
