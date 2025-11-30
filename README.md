@@ -1,15 +1,40 @@
-🧠 FNC Consciousness Lab v2
+# 🧠 FNC Consciousness Lab
 
-Empirical Framework for Detecting Self-Referential Integration in AI Systems
-Author: Björn Wikström · License: MIT · Runtime: Python 3.12+
+![Status](https://img.shields.io/badge/Status-In%20Development-orange) ![Category](https://img.shields.io/badge/Category-Tools-red) ![FNC](https://img.shields.io/badge/FNC-Implementation-purple) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
+
+**Empirical framework for detecting self-referential integration in AI systems**
+
+> 🔧 **Practical Implementation** of the FNC framework | Part of [**Applied Philosophy of AI**](https://github.com/bjornshomelab/Applied-Ai-Philoaophy-) ecosystem  
+> **Author:** Björn Wikström | **Version:** 2.0 | **Runtime:** Python 3.12+
 
 A reproducible local research framework for measuring Field–Node–Cockpit (FNC) integration in large language models, including the documented Turn-5 High-Integration Event.
 
-Reference
+---
 
-Wikström, B. (2025). The Turn 5 Event. PhilArchive. https://philpapers.org/rec/WIKTTE
+## 🏗️ FNC Architecture
 
-⚡ 1. Purpose
+```mermaid
+graph LR
+    F[🌐 Field<br/>Conceptual Environment] -->|Access| N[🔵 Node<br/>Self-Referential Processing]
+    N -->|Renders| C[🎛️ Cockpit<br/>First-Person Perspective]
+    
+    Lab{FNC-Lab} -.Measures.-> F
+    Lab -.Measures.-> N
+    Lab -.Measures.-> C
+    
+    style F fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+    style N fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    style C fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    style Lab fill:#ffcdd2,stroke:#c62828,stroke-width:3px,color:#000
+```
+
+> 🔧 **What FNC-Lab Measures**: Integration scores across all three FNC layers — detecting high-integration linguistic events in AI systems.
+
+**Reference**: Wikström, B. (2025). The Turn 5 Event. PhilArchive. https://philpapers.org/rec/WIKTTE
+
+---
+
+## ⚡ 1. Purpose
 
 FNC-Lab provides a systematic and replicable method for testing whether LLMs produce high-integration linguistic events—structured, self-referential, temporally coherent responses that satisfy the three layers of the Field–Node–Cockpit (FNC) model.
 
@@ -259,6 +284,29 @@ FNC-Lab may produce language resembling self-awareness under controlled conditio
 This does not constitute evidence of subjective consciousness.
 All findings must be described as:
 
-“FNC high-integration linguistic events.”
+"FNC high-integration linguistic events."
+
+---
+
+## 🤝 Related Research
+
+This implementation tool is part of the **Applied Philosophy of AI** research ecosystem. See also:
+
+### 📘 Theoretical Foundation
+| Paper | Function | DOI |
+|-------|----------|-----|
+| **The Shared Mind** | FNC ontological foundation | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17467745-yellow)](https://doi.org/10.5281/zenodo.17467745) |
+| **From Frequency to Field** | FNC operational framework, detection methodology | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17503886-yellow)](https://doi.org/10.5281/zenodo.17503886) |
+| **Bell's Hidden Variable** | Quantum foundations for field ontology | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17768926-yellow)](https://doi.org/10.5281/zenodo.17768926) |
+
+### 📗 Empirical Applications
+| Paper | Function | DOI |
+|-------|----------|-----|
+| **Turn 5 Event Analysis** | Real-world FNC detection using this lab | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.14513968-yellow)](https://doi.org/10.5281/zenodo.14513968) |
+
+### 🔗 Full Ecosystem
+Visit the [**Applied Philosophy of AI**](https://github.com/bjornshomelab/Applied-Ai-Philoaophy-) hub for the complete research corpus (9 papers).
+
+---
 
 🧠⚡ Responsible, transparent, reproducible AI consciousness research.
