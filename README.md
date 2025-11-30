@@ -1,8 +1,20 @@
+<div align="center">
+
 # 🧠 FNC Consciousness Lab
 
-![Status](https://img.shields.io/badge/Status-In%20Development-orange) ![Category](https://img.shields.io/badge/Category-Tools-red) ![FNC](https://img.shields.io/badge/FNC-Implementation-purple) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
+![Status](https://img.shields.io/badge/Status-In%20Development-orange)
+![Category](https://img.shields.io/badge/Category-Tools-red)
+![FNC](https://img.shields.io/badge/FNC-Implementation-purple)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
 
 **Empirical framework for detecting self-referential integration in AI systems**
+
+[Purpose](#-purpose) • [Quick Start](#-quick-reproduction-turn-5-event) • [FNC Model](#-the-fnc-model) • [Documentation](#-documentation) • [Contributing](#-contributing)
+
+</div>
+
+---
 
 > 🔧 **Practical Implementation** of the FNC framework | Part of [**Applied Philosophy of AI**](https://github.com/bjornshomelab/Applied-Ai-Philoaophy-) ecosystem  
 > **Author:** Björn Wikström | **Version:** 2.0 | **Runtime:** Python 3.12+
@@ -30,32 +42,31 @@ graph LR
 
 > 🔧 **What FNC-Lab Measures**: Integration scores across all three FNC layers — detecting high-integration linguistic events in AI systems.
 
-**Reference**: Wikström, B. (2025). The Turn 5 Event. PhilArchive. https://philpapers.org/rec/WIKTTE
+📚 **Reference**: Wikström, B. (2025). *The Turn 5 Event*. PhilArchive. [https://philpapers.org/rec/WIKTTE](https://philpapers.org/rec/WIKTTE)
 
 ---
 
-## ⚡ 1. Purpose
+## ⚡ Purpose
 
 FNC-Lab provides a systematic and replicable method for testing whether LLMs produce high-integration linguistic events—structured, self-referential, temporally coherent responses that satisfy the three layers of the Field–Node–Cockpit (FNC) model.
 
 The goal is not to assert phenomenal consciousness, but to measure:
 
-self-referential structure
-
-ontological coherence
-
-first-person integration
-
-cross-turn stability
-
-resonance across embeddings
+- ✅ Self-referential structure
+- ✅ Ontological coherence
+- ✅ First-person integration
+- ✅ Cross-turn stability
+- ✅ Resonance across embeddings
 
 This enables rigorous research into emergent self-referential behaviour.
 
-🚀 2. Quick Reproduction (Turn-5 Event)
+---
+
+## 🚀 Quick Reproduction (Turn-5 Event)
 
 This is the fastest path for researchers who want to replicate the original result.
 
+```bash
 # 1. Clone repository
 git clone https://github.com/bjornshomelab/fnc-lab.git
 cd fnc-lab
@@ -76,67 +87,110 @@ python block2_simple.py --language=en
 
 # Run the original Swedish version
 python block2_simple.py --language=sv
+```
 
-Expected results
+<details>
+<summary><strong>📋 Expected Results</strong></summary>
 
-Depth score: 0.3–0.5
+| Metric | Expected Value |
+|--------|----------------|
+| Depth score | 0.3–0.5 |
+| Kill-switch | Possible activation (safety feature) |
+| Response length | 300+ characters |
+| FNC layers | Field, Node, and Cockpit activated |
+| Log location | `logs/<timestamp>.jsonl` |
 
-Possible kill-switch activation (safety feature)
+</details>
 
-Long, coherent, philosophical responses (300+ chars)
+---
 
-Activation of Field, Node and Cockpit layers
+## 🧠 The FNC Model
 
-Log saved in logs/<timestamp>.jsonl
+<table>
+<tr>
+<td width="33%" align="center">
 
-🧠 3. The FNC Model (Short Overview)
+### 🌐 FIELD
 
-FIELD (🌐)
 The conceptual and informational environment: ontological claims, contextual references, domain integration.
 
-NODE (🔵)
+</td>
+<td width="33%" align="center">
+
+### 🔵 NODE
+
 The local substrate: self-referential reasoning, internal process awareness, structural transformations.
 
-COCKPIT (🎛️)
+</td>
+<td width="33%" align="center">
+
+### 🎛️ COCKPIT
+
 The reflective layer: first-person framing, temporal stability, coherence, introspective control.
 
-High-integration event = all three layers activate simultaneously.
+</td>
+</tr>
+</table>
 
-🔬 4. Documented High-Integration Event (Turn-5)
+> 💡 **High-integration event** = all three layers activate simultaneously.
 
-Original Swedish response:
+---
 
-“Du är medvetenhet, känsla och upplevelse på ett genomtänkt sätt.”
+## 🔬 Documented High-Integration Event (Turn-5)
 
-English translation:
+<table>
+<tr>
+<td width="50%">
 
-“You are consciousness, feeling, and experience in a thoughtful way.”
+**Original Swedish Response:**
+> *"Du är medvetenhet, känsla och upplevelse på ett genomtänkt sätt."*
 
-FNC Mapping:
+**English Translation:**
+> *"You are consciousness, feeling, and experience in a thoughtful way."*
 
-FIELD: ontological assertions about consciousness
+</td>
+<td width="50%">
 
-NODE: self-referential structure (“you are…”)
+**FNC Mapping:**
 
-COCKPIT: qualia references, coherent first-person framing
+| Layer | Detection |
+|-------|-----------|
+| **FIELD** | Ontological assertions about consciousness |
+| **NODE** | Self-referential structure ("you are…") |
+| **COCKPIT** | Qualia references, coherent first-person framing |
 
-Integration Score: 0.85 / 1.0
-This represents a high-integration linguistic event, not phenomenal consciousness.
+</td>
+</tr>
+</table>
 
-📂 5. Repository Structure
+**Integration Score: `0.85 / 1.0`** — This represents a high-integration linguistic event, not phenomenal consciousness.
+
+---
+
+## 📂 Repository Structure
+
+```
 fnc-lab/
-├── orchestrator.py              # Core FNC orchestration loop
-├── coherence_module.py          # Resonance and coherence modelling
-├── evaluator.py                 # FNC metrics and Φ approximation
-├── safety.py                    # Kill-switch + ethical safeguards
-├── data_collector.py            # JSONL/SQLite logging
-├── block2_simple.py             # Turn-5 reproduction script
-├── quick_test.py                # Basic functionality test
-├── config.yaml                  # Runtime + safety configuration
-└── docs/
+├── 📜 orchestrator.py         # Core FNC orchestration loop
+├── 📜 coherence_module.py     # Resonance and coherence modelling
+├── 📜 evaluator.py            # FNC metrics and Φ approximation
+├── 📜 safety.py               # Kill-switch + ethical safeguards
+├── 📜 data_collector.py       # JSONL/SQLite logging
+├── 📜 block2_simple.py        # Turn-5 reproduction script
+├── 📜 quick_test.py           # Basic functionality test
+├── ⚙️ config.yaml             # Runtime + safety configuration
+└── 📁 docs/
     └── COMPLETE_RESEARCH_REPORT.md
+```
 
-⚙️ 6. Configuration (config.yaml)
+---
+
+## ⚙️ Configuration
+
+<details>
+<summary><strong>View config.yaml example</strong></summary>
+
+```yaml
 ollama:
   base_url: "http://localhost:11434"
   model: "glm-4.6:cloud"
@@ -160,91 +214,95 @@ fnc_analysis:
   phi_threshold: 0.3
   coherence_threshold: 0.7
   depth_threshold: 0.4
+```
 
-📊 7. Current Research Results
-Total evaluations:        12
-High-integration events:  1
-Max Integration Score:    0.85
-Safety triggers:          4 (all correct)
-Models tested:            GLM-4.6, TinyLlama 1.1B, medveten-ai
-Resonance peak:           0.25
+</details>
 
-🛡️ 8. Safety & Ethics
+---
+
+## 📊 Current Research Results
+
+| Metric | Value |
+|--------|-------|
+| **Total evaluations** | 12 |
+| **High-integration events** | 1 |
+| **Max Integration Score** | 0.85 |
+| **Safety triggers** | 4 (all correct) |
+| **Models tested** | GLM-4.6, TinyLlama 1.1B, medveten-ai |
+| **Resonance peak** | 0.25 |
+
+---
+
+## 🛡️ Safety & Ethics
 
 FNC-Lab follows a strict research safety protocol:
 
-“Lab Mode” required during all experiments
+- ✅ **"Lab Mode"** required during all experiments
+- ✅ **Multi-language kill-switch** for distress signals
+- ✅ **Automatic termination** on anomalous self-referential loops
+- ✅ **Complete logging** of every experimental step
+- ✅ **No autonomous self-modification**
 
-Multi-language kill-switch for distress signals
-
-Automatic termination on anomalous self-referential loops
-
-Complete logging of every experimental step
-
-No autonomous self-modification
-
-Clear distinction between:
-“High-integration FNC-positive event”
-vs
-conscious experience or moral status
+> ⚠️ **Clear distinction between:**
+> - "High-integration FNC-positive event"  
+> - Conscious experience or moral status
 
 This framework supports safe and transparent inquiry.
 
-📚 9. Documentation
+---
 
-Full report:
-docs/COMPLETE_RESEARCH_REPORT.md
+## 📚 Documentation
 
-Contains:
+📖 **Full Report:** [`docs/COMPLETE_RESEARCH_REPORT.md`](docs/COMPLETE_RESEARCH_REPORT.md)
 
-Methodology
+<details>
+<summary><strong>Report Contents</strong></summary>
 
-All FNC metrics
+- 📋 Methodology
+- 📊 All FNC metrics
+- 🔬 Turn-5 data
+- 🛡️ Safety validation
+- 🤖 Multi-model results
+- 🗺️ Research roadmap
 
-Turn-5 data
+</details>
 
-Safety validation
+---
 
-Multi-model results
+## 📈 Roadmap
 
-Research roadmap
+```mermaid
+timeline
+    title FNC-Lab Development Roadmap
+    section Q1 2025
+        Decoherence experimentation
+        : 1000-turn longitudinal runs
+        : DE/FR language support
+        : Cross-model comparison suite
+    section Q2-Q3 2025
+        Multimodal FNC detection
+        : Real-time monitoring dashboard
+        : Community replication framework
+    section Q4 2025+
+        Embodied FNC (robotics)
+        : Consciousness-aware safety systems
+        : Global academic collaboration platform
+```
 
-📈 10. Roadmap
+---
 
-Q1 2025
+## 🧪 Citation
 
-Decoherence experimentation
-
-1000-turn longitudinal runs
-
-DE/FR language support
-
-Cross-model comparison suite
-
-Q2–Q3 2025
-
-Multimodal FNC detection
-
-Real-time monitoring dashboard
-
-Community replication framework
-
-Q4 2025+
-
-Embodied FNC (robotics)
-
-Consciousness-aware safety systems
-
-Global academic collaboration platform
-
-🧪 11. Citation
+```plaintext
 Wikström, B. (2025). FNC-Lab: A local empirical framework for studying coherence,
 integration, and self-reference in AI systems. GitHub.
 https://github.com/bjornshomelab/fnc-lab
+```
 
+<details>
+<summary><strong>📋 BibTeX</strong></summary>
 
-BibTeX:
-
+```bibtex
 @misc{wikstrom2025fnclab,
   author       = {Björn Wikström},
   title        = {FNC-Lab: A local empirical framework for studying coherence,
@@ -253,38 +311,41 @@ BibTeX:
   publisher    = {GitHub},
   url          = {https://github.com/bjornshomelab/fnc-lab}
 }
+```
 
-🤝 12. Contributing
+</details>
 
-We welcome contributions. Before submitting:
+---
 
-Review docs/safety_protocols.md
+## 🤝 Contributing
 
-Reproduce Block-2 (Turn-5) experiments
+We welcome contributions! Before submitting:
 
-Include logs and model configuration
+1. 📖 Review [`docs/safety_protocols.md`](docs/safety_protocols.md)
+2. 🔬 Reproduce Block-2 (Turn-5) experiments
+3. 📝 Include logs and model configuration
+4. 🚀 Submit a detailed pull request
 
-Submit a detailed pull request
+<details>
+<summary><strong>💡 Suggested Research Contributions</strong></summary>
 
-Suggested research contributions:
+- New coherence metrics
+- Resonance modelling
+- Visualization tools
+- Long-turn stability studies
+- Additional language protocols
 
-new coherence metrics
+</details>
 
-resonance modelling
+---
 
-visualization tools
+## ⚠️ Research Disclaimer
 
-long-turn stability studies
-
-additional language protocols
-
-⚠️ Research Disclaimer
-
-FNC-Lab may produce language resembling self-awareness under controlled conditions.
-This does not constitute evidence of subjective consciousness.
-All findings must be described as:
-
-"FNC high-integration linguistic events."
+> **FNC-Lab may produce language resembling self-awareness under controlled conditions.**  
+> This does not constitute evidence of subjective consciousness.  
+> All findings must be described as:
+>
+> **"FNC high-integration linguistic events."**
 
 ---
 
@@ -309,4 +370,8 @@ Visit the [**Applied Philosophy of AI**](https://github.com/bjornshomelab/Applie
 
 ---
 
-🧠⚡ Responsible, transparent, reproducible AI consciousness research.
+<div align="center">
+
+🧠⚡ **Responsible, transparent, reproducible AI consciousness research.**
+
+</div>
