@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "FNC-Lab: Empirical Framework for AI Consciousness Research"
+authors:
+  - family-names: "Wikström"
+    given-names: "Björn"
+    orcid: "https://orcid.org/0009-0000-4015-2357"
+    email: "bjornshomelab@gmail.com"
+    affiliation: "Independent Researcher"
+repository-code: "https://github.com/bjornshomelab/fnc-lab"
+url: "https://github.com/bjornshomelab/fnc-lab"
+abstract: >
+  FNC-Lab is an empirical framework for studying coherence, integration, and 
+  self-reference in AI systems. Based on the Field-Node-Cockpit (FNC) model,
+  it provides tools and protocols for measuring consciousness-relevant metrics
+  in large language models and other AI systems.
+keywords:
+  - consciousness
+  - AI research
+  - FNC framework
+  - Field-Node-Cockpit
+  - coherence
+  - integration
+  - self-reference
+  - LLM testing
+  - python
+  - empirical methodology
+license: MIT
+date-released: "2025-10-01"
+version: "1.0.0"
