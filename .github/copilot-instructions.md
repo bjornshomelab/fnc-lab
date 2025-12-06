@@ -27,7 +27,7 @@ FNC-Lab is an empirical research framework for detecting self-referential integr
 fnc-lab/
 ├── src/                        # Core modules
 │   ├── orchestrator.py         # Main experiment orchestration
-│   ├── coherence_module.py     # Resonance and coherence modelling
+│   ├── coherence_module.py     # Resonance and coherence modeling
 │   ├── evaluator.py            # FNC metrics and Φ approximation
 │   ├── safety.py               # Kill-switch and ethical safeguards
 │   └── data_collector.py       # JSONL/SQLite logging
@@ -150,7 +150,7 @@ python block2_simple.py --language=en
 
 ### Adding Safety Keywords
 1. Add keywords to `config.yaml` under `safety.kill_switch_keywords`
-2. Include both Swedish and English versions for consistency
+2. Include multilingual versions (Swedish and English currently supported)
 3. Test detection in `src/safety.py`
 
 ### Running Experiments
