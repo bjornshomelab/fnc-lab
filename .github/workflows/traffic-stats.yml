@@ -1,0 +1,41 @@
+name: Daily Traffic Statistics
+
+on:
+  schedule:
+    # Runs daily at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  collect-traffic-stats:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          
+      - name: Install dependencies
+        run: |
+          pip install requests
+          
+      - name: Collect traffic statistics
+        env:
+          GITHUB_TOKEN: ${{ secrets.ORG_TRAFFIC_TOKEN }}
+          ORG_NAME: Applied-Ai-Philosophy
+        run: python .github/scripts/collect_traffic_stats.py
+        
+      - name: Commit and push statistics
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/traffic_stats/
+          git diff --staged --quiet || git commit -m "📊 Update traffic statistics $(date +'%Y-%m-%d')"
+          git push

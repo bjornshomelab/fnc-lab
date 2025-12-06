@@ -209,6 +209,25 @@ Multi-model results
 
 Research roadmap
 
+## 📊 Traffic Statistics
+
+This repository includes an automated workflow that collects daily traffic statistics for all repositories in the Applied-Ai-Philosophy organization.
+
+**Location:** [`data/traffic_stats/`](data/traffic_stats/)
+
+**Workflow:** [`.github/workflows/traffic-stats.yml`](.github/workflows/traffic-stats.yml)
+
+**Features:**
+- Daily automated collection at 06:00 UTC
+- Page views and unique visitors
+- Repository clones
+- Popular paths and referrers
+- Historical snapshots
+
+**Setup:** Requires a GitHub Personal Access Token with `repo` scope stored as `ORG_TRAFFIC_TOKEN` secret.
+
+---
+
 📈 10. Roadmap
 
 Q1 2025
