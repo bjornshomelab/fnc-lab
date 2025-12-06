@@ -23,14 +23,21 @@ from pathlib import Path
 
 import requests
 
+# Constants
+REQUEST_TIMEOUT = 30
+
+
+def get_headers(token: str) -> dict:
+    """Return standard headers for GitHub API requests."""
+    return {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github.v3+json",
+    }
+
 
 def get_org_repos(token: str, org_name: str) -> list[dict]:
     """Fetch all repositories in the organization."""
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json",
-    }
-    
+    headers = get_headers(token)
     repos = []
     page = 1
     
@@ -38,7 +45,7 @@ def get_org_repos(token: str, org_name: str) -> list[dict]:
         url = f"https://api.github.com/orgs/{org_name}/repos"
         params = {"per_page": 100, "page": page}
         
-        response = requests.get(url, headers=headers, params=params, timeout=30)
+        response = requests.get(url, headers=headers, params=params, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
         
         data = response.json()
@@ -53,15 +60,11 @@ def get_org_repos(token: str, org_name: str) -> list[dict]:
 
 def get_traffic_views(token: str, owner: str, repo: str) -> dict:
     """Fetch traffic views for a repository."""
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json",
-    }
-    
+    headers = get_headers(token)
     url = f"https://api.github.com/repos/{owner}/{repo}/traffic/views"
     
     try:
-        response = requests.get(url, headers=headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
         return response.json()
     except requests.exceptions.HTTPError as e:
@@ -73,15 +76,11 @@ def get_traffic_views(token: str, owner: str, repo: str) -> dict:
 
 def get_traffic_clones(token: str, owner: str, repo: str) -> dict:
     """Fetch traffic clones for a repository."""
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json",
-    }
-    
+    headers = get_headers(token)
     url = f"https://api.github.com/repos/{owner}/{repo}/traffic/clones"
     
     try:
-        response = requests.get(url, headers=headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
         return response.json()
     except requests.exceptions.HTTPError as e:
@@ -93,15 +92,11 @@ def get_traffic_clones(token: str, owner: str, repo: str) -> dict:
 
 def get_popular_paths(token: str, owner: str, repo: str) -> list:
     """Fetch popular paths for a repository."""
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json",
-    }
-    
+    headers = get_headers(token)
     url = f"https://api.github.com/repos/{owner}/{repo}/traffic/popular/paths"
     
     try:
-        response = requests.get(url, headers=headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
         return response.json()
     except requests.exceptions.HTTPError as e:
@@ -112,15 +107,11 @@ def get_popular_paths(token: str, owner: str, repo: str) -> list:
 
 def get_popular_referrers(token: str, owner: str, repo: str) -> list:
     """Fetch popular referrers for a repository."""
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json",
-    }
-    
+    headers = get_headers(token)
     url = f"https://api.github.com/repos/{owner}/{repo}/traffic/popular/referrers"
     
     try:
-        response = requests.get(url, headers=headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
         return response.json()
     except requests.exceptions.HTTPError as e:
